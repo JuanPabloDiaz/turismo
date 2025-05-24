@@ -13,6 +13,10 @@ Un sitio estático que permite visualizar ubicaciones turísticas con imágenes,
 - [API de Colombia](https://api-colombia.com/)
 - GitHub Pages
 
+## Mapa Turístico
+
+![Mapa](./assets/mapa.png)
+
 ## ¿Cómo correr el proyecto localmente?
 
 ```bash
