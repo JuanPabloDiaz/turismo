@@ -1,0 +1,33 @@
+name: Generate attractions.js from API
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * 1" # Cada lunes a las 3 AM UTC
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install fetch dependency
+        run: npm install node-fetch@2
+
+      - name: Generate JS file
+        run: |
+          node ./scripts/generateAttractions.js
+
+      - name: Commit and push
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'actions@github.com'
+          git add assets/js/attractions.js
+          git commit -m 'Update attractions.js from API' || echo "No changes to commit"
+          git push

@@ -1,0 +1,27 @@
+# Archivos generados por Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de entorno
+.env
+*.env
+
+# Archivos temporales o de backup
+*.log
+*.swp
+*~
+
+# Archivos de node (en caso de usar algún build system adicional)
+node_modules/
+
+# GitHub Actions cache (opcional)
+*.cache/
+
+# VSCode
+.vscode/
