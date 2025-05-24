@@ -2,7 +2,7 @@
 
 Representación gráfica de [Comunidades - Python Colombia](https://github.com/ColombiaPython/comunidades).
 
-![Mapa de Comunidades](./assets/map-meetups.png)
+![Mapa turistico de Colombia](./assets/)
 
 ## [Sobre Leaflet](https://leafletjs.com)
 
