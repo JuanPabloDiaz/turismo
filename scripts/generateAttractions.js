@@ -8,7 +8,7 @@ fetch("https://api-colombia.com/api/v1/TouristicAttraction")
       name: a.name,
       lat: parseFloat(a.latitude),
       lon: parseFloat(a.longitude),
-      url: "", // puedes completar esto luego si tienes enlaces
+      city: a.city?.name || "",
       description: a.description.slice(0, 250) + "...",
       img: a.images[0] || "",
     }));
