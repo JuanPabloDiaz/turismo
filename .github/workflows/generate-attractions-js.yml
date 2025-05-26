@@ -25,9 +25,12 @@ jobs:
           node ./scripts/generateAttractions.js
 
       - name: Commit and push
+        env:
+          MAPA_TURISMO_COLOMBIA: ${{ secrets.MAPA_TURISMO_COLOMBIA }}
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'actions@github.com'
+          git remote set-url origin https://x-access-token:${MAPA_TURISMO_COLOMBIA}@github.com/JuanPabloDiaz/turismo.git
           git add assets/js/attractions.js
           git commit -m 'Update attractions.js from API' || echo "No changes to commit"
           git push
