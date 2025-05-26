@@ -23,15 +23,11 @@ Un sitio estático que permite visualizar ubicaciones turísticas con imágenes,
 git clone https://github.com/TU_USUARIO/turismo.git
 cd turismo
 # Abre index.html directamente en tu navegador
+```
 
-Licencia
+## Licencia
 
 Este proyecto está bajo la licencia MIT.
 Copyright © Juan Pablo Díaz
 
 Basado originalmente en una plantilla de ColombiaPython/map-meetups, con modificaciones y desarrollo adicional por Juan Pablo Díaz.
-
----
-
-Con esta estructura, **todo el crédito principal es tuyo**, y se hace una mención técnica al final como corresponde por la licencia. ¿Quieres que te lo genere como archivo `.md` directamente?
-```
