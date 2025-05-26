@@ -3,16 +3,19 @@ name: Generate attractions.js from API
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 3 * * 1" # Cada lunes a las 3 AM UTC
+    - cron: "0 3 1-7 * 1" # Primer lunes del mes a las 3 AM UTC
+    - cron: "0 3 15-21 * 1" # Tercer lunes del mes a las 3 AM UTC
 
 jobs:
   generate:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Add this to give write permissions
     steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.MAPA_TURISMO_COLOMBIA }} # Use token in checkout
+          token: ${{ secrets.GITHUB_TOKEN }} # Use built-in token
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
